@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+
+    <meta name="description" content="Akimo-Project: Engine">
+    <meta name="author" content="@SakulFlee">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/engine/style.css" integrity="sha384-j5H4_SPG-EjuHoZFqS0udity-Olo9JA-U3vTOFQ2Jqb7AUsS47LdYFPfD7C_QkSP">
+
+    <title>Akimo-Project: Engine</title>
+
+<link rel="preload" href="/engine/engine_web_bg.wasm" crossorigin="anonymous" integrity="sha384-upbwpIXCxq2oTSbw652W-MLJRvEi9K8OolGm-qQAYvyGwENhmGlHORLmY1cI-AKr" as="fetch" type="application/wasm">
+<link rel="modulepreload" href="/engine/engine_web.js" crossorigin="anonymous" integrity="sha384-oqDejnWvS_JRba15r7qQTLcKiN2HAVONYDPuxDTTzGIWo4gVxroUPi3VhGqqfaEe"></head>
+<body>
+    <header>Akimo-Project: Engine</header>
+    <canvas id="canvas"></canvas>
+    <footer>(C) @SakulFlee 2024</footer>
+
+
+<script type="module">
+import init, * as bindings from '/engine/engine_web.js';
+init('/engine/engine_web_bg.wasm');
+window.wasmBindings = bindings;
+
+</script></body></html>
